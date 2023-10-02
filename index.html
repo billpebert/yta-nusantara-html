@@ -8,14 +8,422 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap"
 			rel="stylesheet">
-		<script src="https://cdn.tailwindcss.com"></script>
-		<script src="/assets/scripts/tailwind-config.js"></script>
+			<script src="https://cdn.tailwindcss.com"></script>
+			<script src="/assets/scripts/tailwind-config.js"></script>
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+			<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+			<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<style type="text/tailwindcss">
+			@layer base {
+				.flex::before,
+				.flex::after {
+					display: none !important;
+				}
+
+				img{
+					@apply object-cover;
+				}
+
+				body{
+					@apply font-primary text-dark-1;
+				}
+			}
+
+			@layer utilities {
+				.nav-link-item {
+					@apply flex flex-row items-center gap-1 text-dark-1 text-base font-semibold cursor-pointer hover:text-primary transition-all hover:underline underline-offset-2
+				}
+
+				.nav-link-item.active{
+					@apply underline;
+				}
+
+				.box-shadow {
+					box-shadow: 0px 4px 24px 0px rgba(182, 100, 14, 0.08);
+				}
+
+				.bg-gradient {
+					background: linear-gradient(1deg, rgba(227, 125, 17, 0.40) 0.53%, rgba(0, 0, 0, 0.00) 101.68%, rgba(227, 125, 17, 0.00) 101.68%);
+				}
+
+				.flickity-page-dots .dot.is-selected {
+					background: #F3AF67;
+				}
+			}
+
+			@layer components {
+				.btn-primary {
+					@apply py-3 px-4 text-sm font-semibold rounded-lg bg-primary text-white inline-flex justify-center items-center w-max
+				}
+			}
+		</style>
 	</head>
 
 	<body class="font-primary">
-		<h1 class="text-3xl font-bold underline font-primary">
-			Hello world!
-		</h1>
+		<nav class="container relative my-4 lg:my-7" data-aos="fade-down" data-aos-delay="300">
+			<div class="flex flex-col justify-between w-full lg:flex-row lg:items-center">
+				<!-- Logo & Toggler Button here -->
+				<div class="flex items-center justify-between">
+					<!-- LOGO -->
+					<a href="/">
+						<img src="/assets/images/logo.svg" class="h-full max-h-12 md:max-h-[80px]" alt="" />
+					</a>
+					<!-- RESPONSIVE NAVBAR BUTTON TOGGLER -->
+					<div class="block lg:hidden">
+						<button class="p-1 outline-none mobileMenuButton" id="navbarToggler" data-target="#navigation">
+							<svg class="text-dark w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="M4 8h16M4 16h16"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<!-- Nav Menu -->
+				<div class="hidden w-full lg:block" id="navigation">
+					<div
+						class="flex flex-col items-baseline gap-4 mt-6 lg:justify-between lg:flex-row lg:items-center lg:mt-0">
+						<div
+							class="flex flex-col w-full ml-auto lg:w-auto gap-4 lg:gap-[50px] lg:items-center lg:flex-row">
+							<a href="#" class="nav-link-item">Home</a>
+							<button href="#" class="nav-link-item" data-dropdown-toggle="dropdownOne" id="dropdownOneButton" data-dropdown-placement="bottom-start">
+								Program
+								<img src="/assets/images/ic-chevron.svg" alt="">
+							</button>
+							<!-- Dropdown menu -->
+							<div id="dropdownOne"
+								class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg box-shadow">
+								<ul class="py-2 text-sm text-dark-1 font-medium md:whitespace-nowrap">
+									<li>
+										<button id="dropdownTwoButton" data-dropdown-toggle="dropdownTwo" type="button"
+											class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100">
+											In House Training
+											<img src="/assets/images/ic-chevron.svg" class="-rotate-90" alt="">
+										</button>
+										<div id="dropdownTwo"
+											class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg box-shadow w-[320px] md:w-auto">
+											<ul class="py-2 text-sm text-dark-1 font-medium md:whitespace-nowrap grid grid-rows-3 grid-flow-col gap-2">
+												<li>
+													<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+														Public Speaking & Leadership
+													</a>
+												</li>
+												<li>
+													<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+														Management & Computer
+													</a>
+												</li>
+												<li>
+													<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+														Marketing & Distribution
+													</a>
+												</li>
+												<li>
+													<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+														Komunikasi Publik & Kepemimpinan
+													</a>
+												</li>
+												<li>
+													<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+														Manajemen & Komputer
+													</a>
+												</li>
+												<li>
+													<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+														Pemasaran & Distribusi
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="#" class="block px-4 py-2 hover:bg-gray-100">Corporate Social
+											Responsibility</a>
+									</li>
+								</ul>
+							</div>
+							<a href="#"
+								class="btn-primary">Hubungi
+								Kami</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero -->
+		<section class="relative bg-secondary py-[50px]">
+			<div class="container">
+				<img src="/assets/images/wavy-ornament.svg" class="absolute top-[30px] left-[58px]" alt="">
+
+				<div class="grid lg:grid-cols-2 justify-center lg:px-[50px] items-center gap-14 my-10 lg:my-0">
+					<div>
+						<div class="flex flex-col gap-5 lg:max-w-[545px] w-full">
+							<p class="text-lg text-dark-3 font-medium">
+								Berkarya Bagi Kemuliaan Sang Pencipta Di Indonesia Tercinta
+							</p>
+							<p class="text-6xl md:text-[72px] font-extrabold md:leading-[86px] text-dark-2">
+								Yayasan <br class="hidden md:block">
+								Tunas Agung
+								Nusantara
+							</p>
+							<p class="text-lg font-medium text-dark-1 leading-7">
+								Menjawab setiap tantangan setelah pandemi covid-19, YTA Nusantara hadir dengan beragam program-program sesuai kebutuhan lintas profesi dan instansi
+							</p>
+							<a href="#" class="btn-primary">
+								Pelajari Program Kami
+							</a>
+						</div>
+					</div>
+					<div class="hidden md:block">
+						<img src="/assets/images/hero-illustration.webp" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Learning Techs -->
+		<section class="relative py-[50px]">
+			<div class="container">
+
+				<div class="flex justify-center lg:px-[50px] items-center gap-[50px] my-10 lg:my-0">
+					<div class="max-w-[470px] w-full">
+						<img src="/assets/images/learning-techs.webp" class="w-full" alt="">
+					</div>
+					<div class="max-w-[660px] w-full">
+						<div class="flex flex-col">
+							<p class="text-base text-dark-1 font-normal">
+								Learning Technique
+							</p>
+							<p class="text-[48px] font-bold md:leading-[64px] text-dark-2">
+								English <br class="hidden md:block">
+								Fast Formulation
+							</p>
+							<p class="text-lg text-dark-1 leading-8 font-normal mt-4 mb-10">
+								Sebelum workshop dimulai, para peserta akan mengkuti training khusus dengkuman materi Komunikasi Bahasa Inggris, Tips memahami Bahasa Inggris, dan pemaparan istilah-istilah dalam Bahasa Inggris sesuai dengan bidang keahlian atau topik in – house training yang diminta perusahaan atau instansi
+							</p>
+							<a href="#" class="btn-primary">
+								Hubungi Kami
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- In House Training -->
+		<section class="relative bg-secondary py-[50px]">
+			<div class="container">
+				<div class="w-full mb-[50px]">
+					<div class="flex flex-col items-center justify-center">
+						<p class="text-xl text-orange font-semibold mb-5">
+							Our Services
+						</p>
+						<p class="text-[48px] font-bold md:leading-[64px] text-dark-2">
+							Dokumentasi In House Training
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="ihtCarousel" class="md:ml-[50px]">
+				<!-- Card 1 -->
+				<div class="rounded-2xl w-[375px] h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
+					<div class="absolute px-[10px] py-[6px] bg-orange text-light rounded-full top-[30px] right-4 font-semibold text-xs">
+						Komunikasi Publik & Kepemimpinan
+					</div>
+
+					<div class="absolute bottom-[30px] left-4">
+						<p class="text-2xl text-white font-bold mb-2">
+							Kementerian Pertahanan RI
+						</p>
+						<p class="line-clamp-3 text-sm text-white leading-[22px]">
+							Pelaksanaan program di MTC Training Centre Tomohon selama 3 (tiga) bulan sesuai permintaan dari Kementerian Pertahanan RI di Jakarta. Materi manajemen dan komputer (keterampilan dasar) diberikan oleh para pelatih
+						</p>
+					</div>
+
+					<img src="/assets/images/iht-1.webp" class="h-full w-full" alt="">
+
+					<!-- gradient background -->
+					<div class="absolute top-0 bg-gradient inset-0"></div>
+				</div>
+				<!-- Card 2 -->
+				<div class="rounded-2xl w-[375px] h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
+					<div class="absolute px-[10px] py-[6px] bg-orange text-light rounded-full top-[30px] right-4 font-semibold text-xs">
+						Pemasaran & Distribusi
+					</div>
+					
+					<div class="absolute bottom-[30px] left-4">
+						<p class="text-2xl text-white font-bold mb-2">
+							PT. Pegadaian
+						</p>
+						<p class="line-clamp-3 text-sm text-white leading-[22px]">
+							Pelaksanaan program sesuai permintaan dari PT. PEGADAIAN (Kantor Wilayah V – Manado).
+							Materi dan topik workshop: Strategi Pemasaran dan tantangannya.
+						</p>
+					</div>
+
+					<img src="/assets/images/iht-2.webp" class="h-full w-full" alt="">
+
+					<!-- gradient background -->
+					<div class="absolute top-0 bg-gradient inset-0"></div>
+				</div>
+				<!-- Card 3 -->
+				<div class="rounded-2xl w-[375px] h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
+					<div class="absolute px-[10px] py-[6px] bg-orange text-light rounded-full top-[30px] right-4 font-semibold text-xs">
+						Komunikasi Publik & Kepemimpinan
+					</div>
+					
+					<div class="absolute bottom-[30px] left-4">
+						<p class="text-2xl text-white font-bold mb-2">
+							Kementerian Pangan RI
+						</p>
+						<p class="line-clamp-3 text-sm text-white leading-[22px]">
+							Pelaksanaan program in-house training 1 (satu) hari sesuai permintaan dari Balai Karantina - Kementrian Pangan RI. Para dokter dan beberapa pegawai dengan persiapan yang matang mengikuti program ini.
+						</p>
+					</div>
+
+					<img src="/assets/images/iht-3.webp" class="h-full w-full" alt="">
+
+					<!-- gradient background -->
+					<div class="absolute top-0 bg-gradient inset-0"></div>
+				</div>
+				<!-- Card 4 -->
+				<div class="rounded-2xl w-[375px] h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
+					<div class="absolute px-[10px] py-[6px] bg-orange text-light rounded-full top-[30px] right-4 font-semibold text-xs">
+						Komunikasi Publik & Kepemimpinan
+					</div>
+					
+					<div class="absolute bottom-[30px] left-4">
+						<p class="text-2xl text-white font-bold mb-2">
+							IPDN
+						</p>
+						<p class="line-clamp-3 text-sm text-white leading-[22px]">
+							Penyelenggaraan Training oleh YTA Nusantara selama 3 (tiga) bulan di IPDN (Institut Pemerintahan Dalam Negeri)@2022. Teknik komunikasi publik yang efektif dimulai dari kesadaran bahwa kita perlu secara bersama – sama mencapai tujuan komunikasi tersebut.
+						</p>
+					</div>
+
+					<img src="/assets/images/iht-4.webp" class="h-full w-full" alt="">
+
+					<!-- gradient background -->
+					<div class="absolute top-0 bg-gradient inset-0"></div>
+				</div>
+				<!-- Card 5 -->
+				<div class="rounded-2xl w-[375px] h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
+					<div class="absolute px-[10px] py-[6px] bg-orange text-light rounded-full top-[30px] right-4 font-semibold text-xs">
+						Pemasaran & Distribusi
+					</div>
+					
+					<div class="absolute bottom-[30px] left-4">
+						<p class="text-2xl text-white font-bold mb-2">
+							PT. Daya Adicipta Wisesa
+						</p>
+						<p class="line-clamp-3 text-sm text-white leading-[22px]">
+							Setiap karyawan senior maupun karyawan baru perlu terus meningkatkan kemampuan dan pengetahuan di bidang ini. Sebesar apapun perusahaan , sekuat apapun brand dari perusahaan tersebut, tanpa karyawan terlatih dan terpercaya di bidang pemasaran dan distribusi, maka perusahaan akan mengalami kesulitan dalam melakukan penjuaalan dan penjualan berkala yang ditargetkan
+						</p>
+					</div>
+
+					<img src="/assets/images/iht-5.webp" class="h-full w-full" alt="">
+
+					<!-- gradient background -->
+					<div class="absolute top-0 bg-gradient inset-0"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Corporate Social Responsibility -->
+		<section class="relative py-[50px]">
+			<div class="flex justify-between lg:px-[50px] items-center gap-[50px] my-10 lg:my-0">
+				<div class="max-w-[660px] w-full">
+					<div class="flex flex-col relative">
+						<img src="/assets/images/wavy-ornament.svg" class="absolute top-6 right-0" alt="">
+						<p class="text-[48px] font-bold md:leading-[64px] text-dark-2">
+							Corporate Social <br class="hidden md:block">
+							<span class="text-primary">Responsibility</span>
+						</p>
+						<p class="text-lg text-dark-1 leading-8 font-normal mt-4 mb-10">
+							Pengelolaan CSR bukan sekedar membangun citra perusahaan, namun perusahaan perlu dibantu untuk dapat memberi kontribusi yang tepat sasaran dan berguna bagi masyarakat. YTA Nusantara mengelola CSR dari perusahaan secara berkala dan khusus di bidang pendidikan, YTA Nusantara membuka program rumah-rumah belajar di wilayah cakupan NKRI (Negara Kesatuan Republik Indonesia).
+						</p>
+						<a href="#" class="btn-primary">
+							Hubungi Kami
+						</a>
+					</div>
+				</div>
+				<div class="max-w-[647px] w-full">
+					<img src="/assets/images/corporate-social.webp" class="w-full" alt="">
+				</div>
+			</div>
+		</section>
+
+		<!-- In House Training -->
+		<section class="relative bg-secondary py-[50px]">
+			<div class="container">
+				<div class="w-full mb-10">
+					<div class="flex flex-col items-center justify-center">
+						<div class="text-lg text-dark-2 font-medium mb-5 flex gap-[6px] items-center">
+							<div class="w-3 h-3 bg-cream"></div>
+							Workshop CSR Terbaru
+						</div>
+						<p class="text-[38px] font-bold md:leading-[64px] text-dark-2">
+							Beragam Program Pengelolaan CSR
+						</p>
+					</div>
+				</div>
+
+				<div class="max-w-screen-lg mx-auto">
+					<div class="grid md:grid-cols-2 gap-10 justify-center">
+						<!-- Card 1 -->
+						<div class="max-w-[500px] w-full mx-auto">
+							<div class="rounded-xl overflow-hidden">
+								<div class="w-full h-auto">
+									<img src="/assets/images/csr-1.webp" alt="">
+								</div>
+								<div class="inline-flex w-full">
+									<div class="inline-flex items-center gap-[10px] py-5 px-3 w-1/2 text-light bg-choco text-lg font-medium justify-center">
+										13 April 2021
+									</div>
+									<div class="inline-flex items-center gap-[10px] py-5 px-3 w-1/2 text-choco bg-cream text-lg font-medium justify-center">
+										<img src="/assets/images/ic-user.svg" alt="">
+										PT. Freeport Indonesia
+									</div>
+								</div>
+							</div>
+							<div class="mt-5">
+								<p class="min-h-[90px] text-2xl text-dark-2 font-semibold leading-[30px]">
+									Pelatihan untuk anak-anak sekolah Papua dengan permintaan program Soft Skill Training
+								</p>
+								<p class="mt-3 text-lg text-dark-1 leading-[30px] line-clamp-3">
+									Pengeloalaan CSR dari PT. Freeport Indonesia untuk anak-anak sekolah Papua dengan permintaan program Soft Skill Training selama 2 (dua) hari.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+		<script src="/assets/scripts/navtoggler.js"></script>
+		<script src="/assets/scripts/dropdown-config.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				once: true,
+				duration: 300,
+				easing: 'ease-out'
+			});
+
+			$('#ihtCarousel').flickity({
+				// options
+				cellAlign: 'left',
+				contain: true,
+				prevNextButtons: false,
+				wrapAround: false,
+			});
+		</script>
 	</body>
 
 </html>
