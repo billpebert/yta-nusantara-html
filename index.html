@@ -43,7 +43,7 @@
 				}
 
 				.bg-gradient {
-					background: linear-gradient(1deg, rgba(227, 125, 17, 0.35) 0.53%, rgba(0, 0, 0, 0.00) 101.68%, rgba(227, 125, 17, 0.00) 101.68%);
+					background: linear-gradient(358deg, rgba(57, 46, 20, 0.72) 24.06%, rgba(0, 0, 0, 0.00) 100.61%, rgba(227, 125, 17, 0.00) 100.61%);
 				}
 
 				.flickity-page-dots .dot.is-selected {
@@ -60,7 +60,7 @@
 	</head>
 
 	<body class="font-primary">
-		<nav class="container relative my-4 lg:my-7" data-aos="fade-down" data-aos-delay="300">
+		<nav class="container my-4 lg:my-7">
 			<div class="flex flex-col justify-between w-full lg:flex-row lg:items-center">
 				<!-- Logo & Toggler Button here -->
 				<div class="flex items-center justify-between">
@@ -153,12 +153,12 @@
 		</nav>
 
 		<!-- Hero -->
-		<section class="relative bg-secondary py-[50px]">
+		<section class="relative z-0 bg-secondary py-[50px]">
 			<div class="container">
-				<img src="/assets/images/wavy-ornament.svg" class="absolute top-[30px] md:left-[58px]" alt="">
+				<img src="/assets/images/wavy-ornament.svg" class="absolute top-[30px] md:left-[58px]" alt="" data-aos="fade-right" data-aos-delay="300">
 
 				<div class="grid lg:grid-cols-2 justify-center lg:px-[50px] items-center gap-14 my-10 lg:my-0">
-					<div>
+					<div data-aos="fade-right" data-aos-delay="300">
 						<div class="flex flex-col gap-5 lg:max-w-[545px] w-full">
 							<p class="text-lg text-dark-3 font-medium">
 								Berkarya Bagi Kemuliaan Sang Pencipta Di Indonesia Tercinta
@@ -176,7 +176,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="hidden md:block">
+					<div class="hidden md:block" data-aos="fade-left" data-aos-delay="300">
 						<img src="/assets/images/hero-illustration.webp" alt="">
 					</div>
 				</div>
@@ -185,9 +185,9 @@
 
 		<!-- Learning Techs -->
 		<section class="relative py-[50px]">
-			<div class="container">
+			<!-- <div class="container"> -->
 
-				<div class="flex justify-center lg:px-[50px] items-center gap-[50px] my-10 lg:my-0 flex-wrap">
+				<div class="flex justify-center items-center gap-[50px] my-10 lg:my-0 flex-wrap">
 					<div class="max-w-[470px] w-full">
 						<img src="/assets/images/learning-techs.webp" class="w-full" alt="">
 					</div>
@@ -209,7 +209,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			<!-- </div> -->
 		</section>
 
 		<!-- In House Training -->
@@ -228,16 +228,16 @@
 			</div>
 			<div id="ihtCarousel" class="ml-4 md:ml-[50px]">
 				<!-- Card 1 -->
-				<div class="rounded-2xl w-[345px] h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
-					<div class="absolute px-[10px] py-[6px] bg-orange text-light rounded-full top-[30px] right-4 font-semibold text-xs">
+				<div class="rounded-2xl w-[345px] lg:w- h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
+					<div class="absolute px-[10px] py-[6px] bg-primary text-white rounded-full top-4 right-4 font-semibold text-xs">
 						Komunikasi Publik & Kepemimpinan
 					</div>
 
 					<div class="absolute bottom-[30px] left-4 z-10 right-4">
-						<a href="#" class="text-2xl text-white font-bold mb-2">
+						<a href="#" class="text-xl text-light font-bold mb-2">
 							Kementerian Pertahanan RI
 						</a>
-						<p class="line-clamp-3 text-sm text-white leading-[22px]">
+						<p class="line-clamp-3 text-sm text-light leading-[22px]">
 							Pelaksanaan program di MTC Training Centre Tomohon selama 3 (tiga) bulan sesuai permintaan dari Kementerian Pertahanan RI di Jakarta. Materi manajemen dan komputer (keterampilan dasar) diberikan oleh para pelatih
 						</p>
 					</div>
@@ -248,16 +248,16 @@
 					<div class="absolute top-0 bg-gradient inset-0"></div>
 				</div>
 				<!-- Card 2 -->
-				<div class="rounded-2xl w-[345px] h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
-					<div class="absolute px-[10px] py-[6px] bg-orange text-light rounded-full top-[30px] right-4 font-semibold text-xs">
+				<div class="rounded-2xl w-[345px] lg:w- h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
+					<div class="absolute px-[10px] py-[6px] bg-primary text-white rounded-full top-4 right-4 font-semibold text-xs">
 						Pemasaran & Distribusi
 					</div>
 					
 					<div class="absolute bottom-[30px] left-4 z-10 right-4">
-						<a href="#" class="text-2xl text-white font-bold mb-2">
+						<a href="#" class="text-xl text-light font-bold mb-2">
 							PT. Pegadaian
 						</a>
-						<p class="line-clamp-3 text-sm text-white leading-[22px]">
+						<p class="line-clamp-3 text-sm text-light leading-[22px]">
 							Pelaksanaan program sesuai permintaan dari PT. PEGADAIAN (Kantor Wilayah V – Manado).
 							Materi dan topik workshop: Strategi Pemasaran dan tantangannya.
 						</p>
@@ -269,16 +269,16 @@
 					<div class="absolute top-0 bg-gradient inset-0"></div>
 				</div>
 				<!-- Card 3 -->
-				<div class="rounded-2xl w-[345px] h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
-					<div class="absolute px-[10px] py-[6px] bg-orange text-light rounded-full top-[30px] right-4 font-semibold text-xs">
+				<div class="rounded-2xl w-[345px] lg:w- h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
+					<div class="absolute px-[10px] py-[6px] bg-primary text-white rounded-full top-4 right-4 font-semibold text-xs">
 						Komunikasi Publik & Kepemimpinan
 					</div>
 					
 					<div class="absolute bottom-[30px] left-4 z-10 right-4">
-						<a href="#" class="text-2xl text-white font-bold mb-2">
+						<a href="#" class="text-xl text-light font-bold mb-2">
 							Kementerian Pangan RI
 						</a>
-						<p class="line-clamp-3 text-sm text-white leading-[22px]">
+						<p class="line-clamp-3 text-sm text-light leading-[22px]">
 							Pelaksanaan program in-house training 1 (satu) hari sesuai permintaan dari Balai Karantina - Kementrian Pangan RI. Para dokter dan beberapa pegawai dengan persiapan yang matang mengikuti program ini.
 						</p>
 					</div>
@@ -289,16 +289,16 @@
 					<div class="absolute top-0 bg-gradient inset-0"></div>
 				</div>
 				<!-- Card 4 -->
-				<div class="rounded-2xl w-[345px] h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
-					<div class="absolute px-[10px] py-[6px] bg-orange text-light rounded-full top-[30px] right-4 font-semibold text-xs">
+				<div class="rounded-2xl w-[345px] lg:w- h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
+					<div class="absolute px-[10px] py-[6px] bg-primary text-white rounded-full top-4 right-4 font-semibold text-xs">
 						Komunikasi Publik & Kepemimpinan
 					</div>
 					
 					<div class="absolute bottom-[30px] left-4 z-10 right-4">
-						<a href="#" class="text-2xl text-white font-bold mb-2">
+						<a href="#" class="text-xl text-light font-bold mb-2">
 							IPDN
 						</a>
-						<p class="line-clamp-3 text-sm text-white leading-[22px]">
+						<p class="line-clamp-3 text-sm text-light leading-[22px]">
 							Penyelenggaraan Training oleh YTA Nusantara selama 3 (tiga) bulan di IPDN (Institut Pemerintahan Dalam Negeri)@2022. Teknik komunikasi publik yang efektif dimulai dari kesadaran bahwa kita perlu secara bersama – sama mencapai tujuan komunikasi tersebut.
 						</p>
 					</div>
@@ -309,16 +309,16 @@
 					<div class="absolute top-0 bg-gradient inset-0"></div>
 				</div>
 				<!-- Card 5 -->
-				<div class="rounded-2xl w-[345px] h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
-					<div class="absolute px-[10px] py-[6px] bg-orange text-light rounded-full top-[30px] right-4 font-semibold text-xs">
+				<div class="rounded-2xl w-[345px] lg:w- h-[275px] relative bg-gradient overflow-hidden mr-[30px]">
+					<div class="absolute px-[10px] py-[6px] bg-primary text-white rounded-full top-4 right-4 font-semibold text-xs">
 						Pemasaran & Distribusi
 					</div>
 					
 					<div class="absolute bottom-[30px] left-4 z-10 right-4">
-						<a href="#" class="text-2xl text-white font-bold mb-2">
+						<a href="#" class="text-xl text-light font-bold mb-2">
 							PT. Daya Adicipta Wisesa
 						</a>
-						<p class="line-clamp-3 text-sm text-white leading-[22px]">
+						<p class="line-clamp-3 text-sm text-light leading-[22px]">
 							Setiap karyawan senior maupun karyawan baru perlu terus meningkatkan kemampuan dan pengetahuan di bidang ini. Sebesar apapun perusahaan , sekuat apapun brand dari perusahaan tersebut, tanpa karyawan terlatih dan terpercaya di bidang pemasaran dan distribusi, maka perusahaan akan mengalami kesulitan dalam melakukan penjuaalan dan penjualan berkala yang ditargetkan
 						</p>
 					</div>
