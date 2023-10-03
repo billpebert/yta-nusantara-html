@@ -61,7 +61,7 @@
 
 	<body class="font-primary">
 		<nav class="container my-4 lg:my-7">
-			<div class="flex flex-col justify-between w-full lg:flex-row lg:items-center">
+			<div class="flex flex-col w-full lg:flex-row lg:items-center lg:gap-16">
 				<!-- Logo & Toggler Button here -->
 				<div class="flex items-center justify-between">
 					<!-- LOGO -->
@@ -81,12 +81,12 @@
 				</div>
 
 				<!-- Nav Menu -->
-				<div class="hidden w-full lg:block" id="navigation">
+				<div class="hidden lg:block w-full" id="navigation">
 					<div
 						class="flex flex-col items-baseline gap-4 mt-6 lg:justify-between lg:flex-row lg:items-center lg:mt-0">
 						<div
-							class="flex flex-col w-full ml-auto lg:w-auto gap-4 lg:gap-[50px] lg:items-center lg:flex-row">
-							<a href="#" class="nav-link-item">Home</a>
+							class="flex flex-col w-full gap-4 lg:gap-[50px] lg:items-center lg:flex-row">
+							<!-- <a href="#" class="nav-link-item">Home</a> -->
 							<button href="#" class="nav-link-item" data-dropdown-toggle="dropdownOne" id="dropdownOneButton" data-dropdown-placement="bottom-start">
 								Program
 								<img src="/assets/images/ic-chevron.svg" alt="">
@@ -143,9 +143,12 @@
 									</li>
 								</ul>
 							</div>
-							<a href="#"
-								class="btn-primary">Hubungi
-								Kami</a>
+
+							<div class="lg:ml-auto">
+								<a href="#"
+									class="btn-primary">Hubungi
+									Kami</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -184,10 +187,8 @@
 		</section>
 
 		<!-- Learning Techs -->
-		<section class="relative py-[50px]">
-			<!-- <div class="container"> -->
-
-				<div class="flex justify-center items-center gap-[50px] my-10 lg:my-0 flex-wrap">
+		<section class="relative py-[50px] px-4 max-w-screen-xl mx-auto">
+				<div class="flex flex-col md:flex-row justify-center items-center gap-[50px] my-10 lg:my-0">
 					<div class="max-w-[470px] w-full">
 						<img src="/assets/images/learning-techs.webp" class="w-full" alt="">
 					</div>
@@ -209,7 +210,6 @@
 						</div>
 					</div>
 				</div>
-			<!-- </div> -->
 		</section>
 
 		<!-- In House Training -->
@@ -332,7 +332,7 @@
 		</section>
 
 		<!-- Corporate Social Responsibility -->
-		<section class="relative py-[50px]">
+		<section class="relative py-[50px] px-4 max-w-screen-xl mx-auto">
 			<div class="flex flex-col md:flex-row justify-between px-4 lg:px-[50px] items-center gap-[50px] my-10 lg:my-0">
 				<div class="max-w-[660px] w-full">
 					<div class="flex flex-col relative pt-14 md:pt-0">
@@ -373,101 +373,101 @@
 				<div class="max-w-screen-lg mx-auto">
 					<div class="grid md:grid-cols-2 gap-14 md:gap-10 justify-center">
 						<!-- Card 1 -->
-						<div class="max-w-[500px] w-full mx-auto">
-							<div class="rounded-xl overflow-hidden">
+						<div class="max-w-[500px] w-full mx-auto flex flex-row md:flex-col gap-3">
+							<div class="rounded-xl overflow-hidden max-w-[120px] md:max-w-full">
 								<div class="w-full h-auto">
 									<img src="/assets/images/csr-1.webp" alt="">
 								</div>
-								<div class="flex w-full">
-									<div class="flex items-center gap-[10px] py-3 md:py-5 px-3 w-1/2 text-light bg-choco text-lg font-medium justify-center">
+								<div class="flex flex-col md:flex-row w-full">
+									<div class="flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-light bg-choco text-xs md:text-lg font-medium justify-center text-center">
 										13 April 2021
 									</div>
-									<div class="flex items-center gap-[10px] py-3 md:py-5 px-3 w-1/2 text-choco bg-cream text-lg font-medium justify-center">
-										<img src="/assets/images/ic-user.svg" alt="">
+									<div class="flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-choco bg-cream text-xs md:text-lg font-medium justify-center text-center">
+										<img src="/assets/images/ic-user.svg" class="hidden md:block" alt="">
 										PT. Freeport Indonesia
 									</div>
 								</div>
 							</div>
-							<div class="mt-5">
-								<a href="#" class="min-h-[90px] text-2xl text-dark-2 font-semibold leading-[30px]">
+							<div class="md:mt-5">
+								<a href="#" class="min-h-[90px] text-base md:text-2xl text-dark-2 font-semibold md:leading-[30px] hover:underline focus:underline">
 									Pelatihan untuk anak-anak sekolah Papua dengan permintaan program Soft Skill Training
 								</a>
-								<p class="mt-3 text-lg text-dark-1 leading-[30px] line-clamp-3">
+								<p class="mt-3 text-sm md:text-lg text-dark-1 md:leading-[30px] line-clamp-4 md:line-clamp-3">
 									Pengeloalaan CSR dari PT. Freeport Indonesia untuk anak-anak sekolah Papua dengan permintaan program Soft Skill Training selama 2 (dua) hari.
 								</p>
 							</div>
 						</div>
 						<!-- Card 2 -->
-						<div class="max-w-[500px] w-full mx-auto">
-							<div class="rounded-xl overflow-hidden">
+						<div class="max-w-[500px] w-full mx-auto flex flex-row md:flex-col gap-3">
+							<div class="rounded-xl overflow-hidden max-w-[120px] md:max-w-full">
 								<div class="w-full h-auto">
 									<img src="/assets/images/csr-2.webp" alt="">
 								</div>
-								<div class="flex w-full">
-									<div class="flex items-center gap-[10px] py-3 md:py-5 px-3 w-1/2 text-light bg-choco text-lg font-medium justify-center">
+								<div class="flex flex-col md:flex-row w-full">
+									<div class="flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-light bg-choco text-xs md:text-lg font-medium justify-center text-center">
 										22 Januari 2023
 									</div>
-									<div class="flex items-center gap-[10px] py-3 md:py-5 px-3 w-1/2 text-choco bg-cream text-lg font-medium justify-center">
-										<img src="/assets/images/ic-user.svg" alt="">
+									<div class="flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-choco bg-cream text-xs md:text-lg font-medium justify-center text-center">
+										<img src="/assets/images/ic-user.svg" class="hidden md:block" alt="">
 										TK Citra Tunas Bangsa
 									</div>
 								</div>
 							</div>
-							<div class="mt-5">
-								<a href="#" class="min-h-[90px] text-2xl text-dark-2 font-semibold leading-[30px]">
+							<div class="md:mt-5">
+								<a href="#" class="min-h-[90px] text-base md:text-2xl text-dark-2 font-semibold md:leading-[30px] hover:underline focus:underline">
 									Pembukaan Rumah Belajar di Kotamobagu, Sulawesi Utara selama 6 (enam) bulan
 								</a>
-								<p class="mt-3 text-lg text-dark-1 leading-[30px] line-clamp-3">
+								<p class="mt-3 text-sm md:text-lg text-dark-1 md:leading-[30px] line-clamp-4 md:line-clamp-3">
 									Leverage agile frameworks to provide a robust synopsis for high level overviews.Iterative approaches to corporate strategy foster collaborative thinking.
 								</p>
 							</div>
 						</div>
 						<!-- Card 3 -->
-						<div class="max-w-[500px] w-full mx-auto">
-							<div class="rounded-xl overflow-hidden">
+						<div class="max-w-[500px] w-full mx-auto flex flex-row md:flex-col gap-3">
+							<div class="rounded-xl overflow-hidden max-w-[120px] md:max-w-full">
 								<div class="w-full h-auto">
 									<img src="/assets/images/csr-2.webp" alt="">
 								</div>
-								<div class="flex w-full">
-									<div class="flex items-center gap-[10px] py-3 md:py-5 px-3 w-1/2 text-light bg-choco text-lg font-medium justify-center">
+								<div class="flex flex-col md:flex-row w-full">
+									<div class="flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-light bg-choco text-xs md:text-lg font-medium justify-center text-center">
 										22 Januari 2023
 									</div>
-									<div class="flex items-center gap-[10px] py-3 md:py-5 px-3 w-1/2 text-choco bg-cream text-lg font-medium justify-center">
-										<img src="/assets/images/ic-user.svg" alt="">
+									<div class="flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-choco bg-cream text-xs md:text-lg font-medium justify-center text-center">
+										<img src="/assets/images/ic-user.svg" class="hidden md:block" alt="">
 										TK Citra Tunas Bangsa
 									</div>
 								</div>
 							</div>
-							<div class="mt-5">
-								<a href="#" class="min-h-[90px] text-2xl text-dark-2 font-semibold leading-[30px]">
+							<div class="md:mt-5">
+								<a href="#" class="min-h-[90px] text-base md:text-2xl text-dark-2 font-semibold md:leading-[30px] hover:underline focus:underline">
 									Pembukaan Rumah Belajar di Kotamobagu, Sulawesi Utara selama 6 (enam) bulan
 								</a>
-								<p class="mt-3 text-lg text-dark-1 leading-[30px] line-clamp-3">
+								<p class="mt-3 text-sm md:text-lg text-dark-1 md:leading-[30px] line-clamp-4 md:line-clamp-3">
 									Leverage agile frameworks to provide a robust synopsis for high level overviews.Iterative approaches to corporate strategy foster collaborative thinking.
 								</p>
 							</div>
 						</div>
 						<!-- Card 4 -->
-						<div class="max-w-[500px] w-full mx-auto">
-							<div class="rounded-xl overflow-hidden">
+						<div class="max-w-[500px] w-full mx-auto flex flex-row md:flex-col gap-3">
+							<div class="rounded-xl overflow-hidden max-w-[120px] md:max-w-full">
 								<div class="w-full h-auto">
 									<img src="/assets/images/csr-3.webp" alt="">
 								</div>
-								<div class="inline-flex w-full">
-									<div class="inline-flex items-center gap-[10px] py-3 md:py-5 px-3 w-1/2 text-light bg-choco text-lg font-medium justify-center">
+								<div class="flex flex-col md:flex-row w-full">
+									<div class="inline-flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-light bg-choco text-xs md:text-lg font-medium justify-center text-center">
 										13 April 2021
 									</div>
-									<div class="inline-flex items-center gap-[10px] py-3 md:py-5 px-3 w-1/2 text-choco bg-cream text-lg font-medium justify-center">
-										<img src="/assets/images/ic-user.svg" alt="">
+									<div class="inline-flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-choco bg-cream text-xs md:text-lg font-medium justify-center text-center">
+										<img src="/assets/images/ic-user.svg" class="hidden md:block" alt="">
 										PT. Freeport Indonesia
 									</div>
 								</div>
 							</div>
-							<div class="mt-5">
-								<a href="#" class="min-h-[90px] text-2xl text-dark-2 font-semibold leading-[30px]">
+							<div class="md:mt-5">
+								<a href="#" class="min-h-[90px] text-base md:text-2xl text-dark-2 font-semibold md:leading-[30px] hover:underline focus:underline">
 									Pelatihan untuk anak-anak sekolah Papua dengan permintaan program Soft Skill Training
 								</a>
-								<p class="mt-3 text-lg text-dark-1 leading-[30px] line-clamp-3">
+								<p class="mt-3 text-sm md:text-lg text-dark-1 md:leading-[30px] line-clamp-4 md:line-clamp-3">
 									Pengeloalaan CSR dari PT. Freeport Indonesia untuk anak-anak sekolah Papua dengan permintaan program Soft Skill Training selama 2 (dua) hari.
 								</p>
 							</div>
