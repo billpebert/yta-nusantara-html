@@ -4,60 +4,17 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" href="/assets/images/logo-bg-2.svg" type="image/x-icon">
+		<title>YTA Nusantara</title>
+
+		<link rel="shortcut icon" href="/assets/svg/logo-bg-2.svg" type="image/x-icon">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800&display=swap"
 			rel="stylesheet">
-		<script src="https://cdn.tailwindcss.com"></script>
-		<script src="/assets/scripts/tailwind-config.js"></script>
+		<link rel="stylesheet" href="/assets/css/main.css">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		<style type="text/tailwindcss">
-			@layer base {
-				.flex::before,
-				.flex::after {
-					display: none !important;
-				}
-
-				img{
-					@apply object-cover;
-				}
-
-				body{
-					@apply font-primary text-dark-1;
-				}
-			}
-
-			@layer utilities {
-				.nav-link-item {
-					@apply flex flex-row items-center gap-1 text-dark-1 text-base font-semibold cursor-pointer hover:text-primary transition-all hover:underline underline-offset-2
-				}
-
-				.nav-link-item.active{
-					@apply underline;
-				}
-
-				.box-shadow {
-					box-shadow: 0px 4px 24px 0px rgba(182, 100, 14, 0.08);
-				}
-
-				.bg-gradient {
-					background: linear-gradient(358deg, rgba(57, 46, 20, 0.72) 24.06%, rgba(0, 0, 0, 0.00) 100.61%, rgba(227, 125, 17, 0.00) 100.61%);
-				}
-
-				.flickity-page-dots .dot.is-selected {
-					background: #F3AF67;
-				}
-			}
-
-			@layer components {
-				.btn-primary {
-					@apply py-3 px-4 text-sm font-semibold rounded-lg bg-primary text-white inline-flex justify-center items-center w-max
-				}
-			}
-		</style>
 	</head>
 
 	<body class="font-primary">
@@ -67,7 +24,7 @@
 				<div class="flex items-center justify-between">
 					<!-- LOGO -->
 					<a href="/">
-						<img src="/assets/images/logo-bg-1.svg" class="h-full max-h-12 md:max-h-[80px]" alt="" />
+						<img src="/assets/svg/logo-bg-1.svg" class="h-full max-h-12 md:max-h-[80px]" alt="" />
 					</a>
 					<!-- RESPONSIVE NAVBAR BUTTON TOGGLER -->
 					<div class="block lg:hidden">
@@ -90,7 +47,7 @@
 							<!-- <a href="#" class="nav-link-item">Home</a> -->
 							<button href="#" class="nav-link-item" data-dropdown-toggle="dropdownOne" id="dropdownOneButton" data-dropdown-placement="bottom-start">
 								Program
-								<img src="/assets/images/ic-chevron.svg" alt="">
+								<img src="/assets/svg/ic-chevron.svg" alt="">
 							</button>
 							<!-- Dropdown menu -->
 							<div id="dropdownOne"
@@ -100,7 +57,7 @@
 										<button id="dropdownTwoButton" data-dropdown-toggle="dropdownTwo" type="button"
 											class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100">
 											In House Training
-											<img src="/assets/images/ic-chevron.svg" class="-rotate-90" alt="">
+											<img src="/assets/svg/ic-chevron.svg" class="-rotate-90" alt="">
 										</button>
 										<div id="dropdownTwo"
 											class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg box-shadow w-[320px] md:w-auto">
@@ -159,7 +116,7 @@
 		<!-- Hero -->
 		<section class="relative z-0 bg-secondary py-[50px]">
 			<div class="container">
-				<img src="/assets/images/wavy-ornament.svg" class="absolute top-[30px] md:left-[58px]" alt="" data-aos="fade-right" data-aos-delay="300">
+				<img src="/assets/svg/wavy-ornament.svg" class="absolute top-[30px] md:left-[58px]" alt="" data-aos="fade-right" data-aos-delay="300">
 
 				<div class="grid lg:grid-cols-12 justify-center lg:px-[50px] items-center gap-14 my-10 lg:my-0">
 					<div class="lg:col-span-7" data-aos="fade-right" data-aos-delay="300">
@@ -327,7 +284,7 @@
 			<div class="flex flex-col md:flex-row justify-between lg:px-[50px] items-center gap-[50px] my-10 lg:my-0">
 				<div class="max-w-[660px] w-full">
 					<div class="flex flex-col relative pt-14 md:pt-0">
-						<img src="/assets/images/wavy-ornament.svg" class="absolute top-6 right-0" alt="">
+						<img src="/assets/svg/wavy-ornament.svg" class="absolute top-6 right-0" alt="">
 						<p class="text-[36px] md:text-[48px] font-bold md:leading-[64px] text-dark-2">
 							Corporate Social <br class="hidden md:block">
 							<span class="text-primary">Responsibility</span>
@@ -374,7 +331,7 @@
 										13 April 2021
 									</div>
 									<div class="flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-choco bg-cream text-xs md:text-lg font-medium justify-center text-center">
-										<img src="/assets/images/ic-user.svg" class="hidden md:block" alt="">
+										<img src="/assets/svg/ic-user.svg" class="hidden md:block" alt="">
 										PT. Freeport Indonesia
 									</div>
 								</div>
@@ -399,7 +356,7 @@
 										22 Januari 2023
 									</div>
 									<div class="flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-choco bg-cream text-xs md:text-lg font-medium justify-center text-center">
-										<img src="/assets/images/ic-user.svg" class="hidden md:block" alt="">
+										<img src="/assets/svg/ic-user.svg" class="hidden md:block" alt="">
 										TK Citra Tunas Bangsa
 									</div>
 								</div>
@@ -424,7 +381,7 @@
 										22 Januari 2023
 									</div>
 									<div class="flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-choco bg-cream text-xs md:text-lg font-medium justify-center text-center">
-										<img src="/assets/images/ic-user.svg" class="hidden md:block" alt="">
+										<img src="/assets/svg/ic-user.svg" class="hidden md:block" alt="">
 										TK Citra Tunas Bangsa
 									</div>
 								</div>
@@ -449,7 +406,7 @@
 										13 April 2021
 									</div>
 									<div class="inline-flex items-center gap-[10px] p-2 md:py-5 md:w-1/2 text-choco bg-cream text-xs md:text-lg font-medium justify-center text-center">
-										<img src="/assets/images/ic-user.svg" class="hidden md:block" alt="">
+										<img src="/assets/svg/ic-user.svg" class="hidden md:block" alt="">
 										PT. Freeport Indonesia
 									</div>
 								</div>
@@ -473,7 +430,7 @@
 			<div class="flex flex-wrap lg:grid lg:grid-cols-12 md:gap-20 gap-10">
 				<div class="lg:col-span-3">
 					<a href="/">
-						<img src="/assets/images/logo-bg-1.svg" class="h-full max-h-12 md:max-h-[80px]" alt="" />
+						<img src="/assets/svg/logo-bg-1.svg" class="h-full max-h-12 md:max-h-[80px]" alt="" />
 					</a>
 					<p class="mt-5 text-dark-2 text-sm leading-6 font-medium italic">
 						“Seorang pemimpin adalah mereka yang telah terlebih dahulu taat”
@@ -513,17 +470,17 @@
 							</p>
 							<div class="flex flex-col gap-3">
 								<a href="#" class="text-sm text-dark-3 leading-6 hover:underline inline-flex items-start gap-2">
-									<img src="/assets/images/ic-location.svg" alt="">
+									<img src="/assets/svg/ic-location.svg" alt="">
 									Jl. Tondano - Tomohon (Rurukan), <br>
 									Kompleks Perum Citra Asri Blok - D 2 <br>
 									Sasaran - Minahasa , Sulawesi Utara
 								</a>
 								<a href="tel:+6285398520322" class="text-sm text-dark-3 leading-6 hover:underline inline-flex items-start gap-2">
-									<img src="/assets/images/ic-phone.svg" alt="">
+									<img src="/assets/svg/ic-phone.svg" alt="">
 									+62 85398520322
 								</a>
 								<a href="mailto:tercy.maria@gmail.com" class="text-sm text-dark-3 leading-6 hover:underline inline-flex items-start gap-2">
-									<img src="/assets/images/ic-envelope.svg" alt="">
+									<img src="/assets/svg/ic-envelope.svg" alt="">
 									tercy.maria@gmail.com
 								</a>
 							</div>

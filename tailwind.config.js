@@ -1,4 +1,6 @@
-tailwind.config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./**/*.{html,js,py}"],
   theme: {
     fontFamily: {
       'primary': "'Kumbh Sans', sans-serif"
@@ -23,5 +25,7 @@ tailwind.config = {
         light: '#FEFAF6',
       }
     }
-  }
+  },
+  plugins: [],
 }
+
