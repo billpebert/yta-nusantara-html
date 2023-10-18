@@ -5,12 +5,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashboard | Manajemen Program</title>
+        <title>Dashboard | Manajemen Sub-Program</title>
 
         <link rel="shortcut icon" href="/assets/images/logo-bg-2.svg" type="image/x-icon">
 
         <link rel="stylesheet" href="/assets/css/main.css">
-
     </head>
 
     <body class="flex min-h-screen pb-10 font-primary">
@@ -34,12 +33,12 @@
             <div class="flex flex-col w-full gap-10 mt-[50px]">
                 <section>
                     <div class="flex flex-col gap-[14px]">
-                        <a href="/admin/program/" class="group dashboard-link is-active">
+                        <a href="/admin/program/" class="group dashboard-link">
                             <img src="/assets/svg/ic-document.svg"
                                 class="transition-all group-hover:filter-white group-[.is-active]:filter-white" alt="">
                             Program
                         </a>
-                        <a href="/admin/sub-program/" class="group dashboard-link">
+                        <a href="/admin/sub-program/" class="group dashboard-link is-active">
                             <img src="/assets/svg/ic-data.svg"
                                 class="transition-all group-hover:filter-white group-[.is-active]:filter-white" alt="">
                             Sub-Program
@@ -77,10 +76,10 @@
                             </path>
                         </svg>
                     </a>
-                    <h1 class="text-2xl md:text-[32px] md:leading-9 font-bold">Manajemen Program</h1>
+                    <h1 class="text-2xl md:text-[32px] md:leading-9 font-bold">Manajemen Sub-Program</h1>
                 </header>
-                <a href="/admin/program/create.html" class="btn-primary ml-auto md:ml-0">
-                    Create Program
+                <a href="/admin/sub-program/create.html" class="btn-primary ml-auto md:ml-0">
+                    Create Sub-Program
                 </a>
             </div>
 
@@ -88,19 +87,19 @@
                 <div class="table-responsive mb-[14px]">
                     <table class="w-full" id="tableProductsUp">
                         <thead class="border-b border-b-slate-200 bg-slate-100">
-                            <th width="80%" class="py-4 pl-4 last:pl-0">Nama Program</th>
+                            <th width="80%" class="py-4 pl-4 last:pl-0">Nama Sub-Program</th>
                             <th width="" class="py-4 pl-4 last:pl-0">Actions</th>
                         </thead>
                         <tbody>
                             <!-- Item -->
                             <tr>
                                 <td class="text-sm font-medium text-dark-2">
-                                    In House Training
+                                    Public Speaking & Leadership
                                 </td>
                                 <td>
                                     <div class="flex items-center gap-3">
                                         <!-- Edit -->
-                                        <a href="/admin/program/edit.html"
+                                        <a href="/admin/sub-program/edit.html"
                                             class="group transition-all relative rounded-full bg-white hover:bg-primary p-[13px] text-dark-2 hover:text-white min-w-max">
                                             <img src="/assets/svg/ic-pencil.svg"
                                                 class="w-6 h-6 transition-all group-hover:filter-white" alt="">
@@ -117,12 +116,34 @@
                             <!-- Item -->
                             <tr>
                                 <td class="text-sm font-medium text-dark-2">
-                                    Corporate Social Responsibility
+                                    Management & Computer
                                 </td>
                                 <td>
                                     <div class="flex items-center gap-3">
                                         <!-- Edit -->
-                                        <a href="/admin/program/edit.html"
+                                        <a href="/admin/sub-program/edit.html"
+                                            class="group transition-all relative rounded-full bg-white hover:bg-primary p-[13px] text-dark-2 hover:text-white min-w-max">
+                                            <img src="/assets/svg/ic-pencil.svg"
+                                                class="w-6 h-6 transition-all group-hover:filter-white" alt="">
+                                        </a>
+                                        <!-- Delete -->
+                                        <a href="#"
+                                            class="group transition-all relative rounded-full bg-white hover:bg-primary p-[13px] text-dark-2 hover:text-white min-w-max">
+                                            <img src="/assets/svg/ic-trash.svg"
+                                                class="w-6 h-6 transition-all group-hover:filter-white" alt="">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Item -->
+                            <tr>
+                                <td class="text-sm font-medium text-dark-2">
+                                    Marketing & Distribution
+                                </td>
+                                <td>
+                                    <div class="flex items-center gap-3">
+                                        <!-- Edit -->
+                                        <a href="/admin/sub-program/edit.html"
                                             class="group transition-all relative rounded-full bg-white hover:bg-primary p-[13px] text-dark-2 hover:text-white min-w-max">
                                             <img src="/assets/svg/ic-pencil.svg"
                                                 class="w-6 h-6 transition-all group-hover:filter-white" alt="">

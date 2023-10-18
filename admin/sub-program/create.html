@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Dashboard | Manajemen Program</title>
+		<title>Dashboard | Manajemen Sub-Program</title>
 
 		<link rel="shortcut icon" href="/assets/images/logo-bg-2.svg" type="image/x-icon">
 
@@ -34,12 +34,12 @@
 			<div class="flex flex-col w-full gap-10 mt-[50px]">
 				<section>
 					<div class="flex flex-col gap-[14px]">
-						<a href="/admin/program/" class="group dashboard-link is-active">
+						<a href="/admin/program/" class="group dashboard-link">
 							<img src="/assets/svg/ic-document.svg"
 								class="transition-all group-hover:filter-white group-[.is-active]:filter-white" alt="">
 							Program
 						</a>
-						<a href="/admin/sub-program/" class="group dashboard-link">
+						<a href="/admin/sub-program/" class="group dashboard-link is-active">
 							<img src="/assets/svg/ic-data.svg"
 								class="transition-all group-hover:filter-white group-[.is-active]:filter-white" alt="">
 							Sub-Program
@@ -77,18 +77,18 @@
 							</path>
 						</svg>
 					</a>
-					<h1 class="text-2xl md:text-[32px] md:leading-9 font-bold">Create New Program</h1>
+					<h1 class="text-2xl md:text-[32px] md:leading-9 font-bold">Create New Sub-Program</h1>
 				</header>
 			</div>
 
 			<section class="w-full p-4 bg-[#FCFCFC] rounded-2xl flex flex-col max-w-[550px]">
-				<form action="" method="POST" id="programForm" class="flex flex-col gap-5">
+				<form action="" method="POST" id="subProgramForm" class="flex flex-col gap-5">
 					<!-- form group -->
 					<div class="flex flex-col gap-2">
 						<label for="" class="text-base font-medium text-dark-1">
 							Nama
 						</label>
-						<input type="text" name="name" placeholder="Nama Program"
+						<input type="text" name="name" placeholder="Nama Sub-Program"
 							class="px-4 py-3 text-base bg-transparent border-2 rounded-xl outline-none border-slate-200 focus:border-primary placeholder:text-dark-3 text-dark-1"
 							value="">
 					</div>
@@ -99,10 +99,29 @@
 						</label>
 						<textarea name="description" id="" rows="4"
 							class="px-4 py-3 text-base bg-transparent border-2 rounded-xl outline-none border-slate-200 focus:border-primary placeholder:text-dark-3 text-dark-1"
-							placeholder="Deskripsi Program"></textarea>
+							placeholder="Deskripsi Sub-Program"></textarea>
+					</div>
+					<!-- form group -->
+					<div class="flex flex-col gap-2">
+						<label for="" class="text-base font-medium text-dark">
+							Parent Program
+						</label>
+						<select name="parent"
+							class="bg-transparent px-4 py-3 text-base text-dark-1 border-2 rounded-xl outline-none border-slate-200 focus:border-primary placeholder:text-dark-3"
+							required>
+							<option value="" hidden disabled selected>
+								Select parent program
+							</option>
+							<option value="in-house-training">
+								In House Training
+							</option>
+							<option value="corporate-social-training">
+								Corporate & Social Training
+							</option>
+						</select>
 					</div>
 					<div class="mt-10">
-						<a href="/admin/program" class="btn-primary w-full">
+						<a href="/admin/sub-program" class="btn-primary w-full">
 							Simpan
 						</a>
 					</div>

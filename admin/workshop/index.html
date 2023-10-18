@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashboard | Manajemen Program</title>
+        <title>Dashboard | Workshop</title>
 
         <link rel="shortcut icon" href="/assets/images/logo-bg-2.svg" type="image/x-icon">
 
@@ -34,7 +34,7 @@
             <div class="flex flex-col w-full gap-10 mt-[50px]">
                 <section>
                     <div class="flex flex-col gap-[14px]">
-                        <a href="/admin/program/" class="group dashboard-link is-active">
+                        <a href="/admin/program/" class="group dashboard-link">
                             <img src="/assets/svg/ic-document.svg"
                                 class="transition-all group-hover:filter-white group-[.is-active]:filter-white" alt="">
                             Program
@@ -44,7 +44,7 @@
                                 class="transition-all group-hover:filter-white group-[.is-active]:filter-white" alt="">
                             Sub-Program
                         </a>
-                        <a href="/admin/workshop/" class="group dashboard-link">
+                        <a href="/admin/workshop/" class="group dashboard-link is-active">
                             <img src="/assets/svg/ic-people.svg"
                                 class="transition-all group-hover:filter-white group-[.is-active]:filter-white" alt="">
                             Workshop
@@ -77,10 +77,10 @@
                             </path>
                         </svg>
                     </a>
-                    <h1 class="text-2xl md:text-[32px] md:leading-9 font-bold">Manajemen Program</h1>
+                    <h1 class="text-2xl md:text-[32px] md:leading-9 font-bold">Manajemen Workshop</h1>
                 </header>
-                <a href="/admin/program/create.html" class="btn-primary ml-auto md:ml-0">
-                    Create Program
+                <a href="/admin/workshop/create.html" class="btn-primary ml-auto md:ml-0">
+                    Create Workshop
                 </a>
             </div>
 
@@ -88,19 +88,23 @@
                 <div class="table-responsive mb-[14px]">
                     <table class="w-full" id="tableProductsUp">
                         <thead class="border-b border-b-slate-200 bg-slate-100">
-                            <th width="80%" class="py-4 pl-4 last:pl-0">Nama Program</th>
+                            <th width="60%" class="py-4 pl-4 last:pl-0">Nama Workshop</th>
+                            <th width="30%" class="py-4 pl-4 last:pl-0">Thumbnail</th>
                             <th width="" class="py-4 pl-4 last:pl-0">Actions</th>
                         </thead>
                         <tbody>
                             <!-- Item -->
                             <tr>
-                                <td class="text-sm font-medium text-dark-2">
-                                    In House Training
+                                <td class="text-sm font-medium text-dark-2 overflow-ellipsis">
+                                    Pelatihan untuk anak-anak sekolah Papua dengan permintaan program Soft Skill Training
+                                </td>
+                                <td>
+                                    <img src="/assets/images/csr-1.webp" class="w-24 h-24 rounded-lg" alt="">
                                 </td>
                                 <td>
                                     <div class="flex items-center gap-3">
                                         <!-- Edit -->
-                                        <a href="/admin/program/edit.html"
+                                        <a href="/admin/workshop/edit.html"
                                             class="group transition-all relative rounded-full bg-white hover:bg-primary p-[13px] text-dark-2 hover:text-white min-w-max">
                                             <img src="/assets/svg/ic-pencil.svg"
                                                 class="w-6 h-6 transition-all group-hover:filter-white" alt="">
@@ -116,13 +120,16 @@
                             </tr>
                             <!-- Item -->
                             <tr>
-                                <td class="text-sm font-medium text-dark-2">
-                                    Corporate Social Responsibility
+                                <td class="text-sm font-medium text-dark-2 overflow-ellipsis">
+                                    Kementerian Pertahanan RI
+                                </td>
+                                <td>
+                                    <img src="/assets/images/iht-1.webp" class="w-24 h-24 rounded-lg" alt="">
                                 </td>
                                 <td>
                                     <div class="flex items-center gap-3">
                                         <!-- Edit -->
-                                        <a href="/admin/program/edit.html"
+                                        <a href="/admin/workshop/edit.html"
                                             class="group transition-all relative rounded-full bg-white hover:bg-primary p-[13px] text-dark-2 hover:text-white min-w-max">
                                             <img src="/assets/svg/ic-pencil.svg"
                                                 class="w-6 h-6 transition-all group-hover:filter-white" alt="">

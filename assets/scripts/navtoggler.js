@@ -6,3 +6,13 @@ $(".mobileMenuButton").each(function (_, navToggler) {
 		});
 	});
 });
+
+
+// admin sidebar
+$(() => {
+	$(document).on('click', '#navbarTogglerHead, #navbarToggler, #backdropDrawer', () => {
+			$('body').toggleClass('max-h-screen overflow-hidden')
+			$('#backdropDrawer').toggleClass('hidden')
+			$('aside').toggle()
+	})
+})

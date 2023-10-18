@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Dashboard | Manajemen Program</title>
+		<title>Dashboard | Workshop</title>
 
 		<link rel="shortcut icon" href="/assets/images/logo-bg-2.svg" type="image/x-icon">
 
@@ -34,7 +34,7 @@
 			<div class="flex flex-col w-full gap-10 mt-[50px]">
 				<section>
 					<div class="flex flex-col gap-[14px]">
-						<a href="/admin/program/" class="group dashboard-link is-active">
+						<a href="/admin/program/" class="group dashboard-link">
 							<img src="/assets/svg/ic-document.svg"
 								class="transition-all group-hover:filter-white group-[.is-active]:filter-white" alt="">
 							Program
@@ -44,7 +44,7 @@
 								class="transition-all group-hover:filter-white group-[.is-active]:filter-white" alt="">
 							Sub-Program
 						</a>
-						<a href="/admin/workshop/" class="group dashboard-link">
+						<a href="/admin/workshop/" class="group dashboard-link is-active">
 							<img src="/assets/svg/ic-people.svg"
 								class="transition-all group-hover:filter-white group-[.is-active]:filter-white" alt="">
 							Workshop
@@ -77,18 +77,36 @@
 							</path>
 						</svg>
 					</a>
-					<h1 class="text-2xl md:text-[32px] md:leading-9 font-bold">Create New Program</h1>
+					<h1 class="text-2xl md:text-[32px] md:leading-9 font-bold">Create Event/Workshop</h1>
 				</header>
 			</div>
 
 			<section class="w-full p-4 bg-[#FCFCFC] rounded-2xl flex flex-col max-w-[550px]">
-				<form action="" method="POST" id="programForm" class="flex flex-col gap-5">
+				<form action="" method="POST" id="workshopForm" class="flex flex-col gap-5">
 					<!-- form group -->
 					<div class="flex flex-col gap-2">
 						<label for="" class="text-base font-medium text-dark-1">
 							Nama
 						</label>
-						<input type="text" name="name" placeholder="Nama Program"
+						<input type="text" name="name" placeholder="Nama client atau nama tempat"
+							class="px-4 py-3 text-base bg-transparent border-2 rounded-xl outline-none border-slate-200 focus:border-primary placeholder:text-dark-3 text-dark-1"
+							value="">
+					</div>
+					<!-- form group -->
+					<div class="flex flex-col gap-2">
+						<label for="" class="text-base font-medium text-dark-1">
+							Judul
+						</label>
+						<input type="text" name="eventTitle" placeholder="Judul kegiatan"
+							class="px-4 py-3 text-base bg-transparent border-2 rounded-xl outline-none border-slate-200 focus:border-primary placeholder:text-dark-3 text-dark-1"
+							value="">
+					</div>
+					<!-- form group -->
+					<div class="flex flex-col gap-2">
+						<label for="" class="text-base font-medium text-dark-1">
+							Tanggal
+						</label>
+						<input type="date" name="date" placeholder="Tanggal kegiatan"
 							class="px-4 py-3 text-base bg-transparent border-2 rounded-xl outline-none border-slate-200 focus:border-primary placeholder:text-dark-3 text-dark-1"
 							value="">
 					</div>
@@ -99,10 +117,55 @@
 						</label>
 						<textarea name="description" id="" rows="4"
 							class="px-4 py-3 text-base bg-transparent border-2 rounded-xl outline-none border-slate-200 focus:border-primary placeholder:text-dark-3 text-dark-1"
-							placeholder="Deskripsi Program"></textarea>
+							placeholder="Deskripsi kegiatan"></textarea>
+					</div>
+					<!-- form group -->
+					<div class="flex flex-col gap-2">
+						<label for="" class="text-base font-medium text-dark">
+							Tipe Kategori Program
+						</label>
+						<select name="category"
+							class="bg-transparent px-4 py-3 text-base text-dark-1 border-2 rounded-xl outline-none border-slate-200 focus:border-primary placeholder:text-dark-3"
+							required>
+							<option value="" hidden disabled selected>
+								Select tipe program
+							</option>
+							<option value="computer-and-management">
+								Computer & Management
+							</option>
+							<option value="public-speaking-and-leadership">
+								Public Speaking & Leadership
+							</option>
+							<option value="corporate-social-training">
+								Corporate & Social Training
+							</option>
+						</select>
+					</div>
+
+					<!-- form group -->
+					<div class="flex flex-col gap-2">
+						<label for="" class="text-base font-medium text-dark">
+							Photos
+						</label>
+
+						<!-- Photo Gallery -->
+						<div class="grid justify-between grid-cols-2 gap-5 md:grid-cols-4 w-max">
+							<input type="file" name="photo" id="photo" class="hidden" value=""
+								accept="image/x-png,image/jpg,image/jpeg" multiple="multiple" ref="file"
+								@change="uploadPhotos($event)">
+							<button type="button" @click.prevent="$refs.file.click();">
+								<img src="/assets/svg/add-image.svg"
+									class="w-[100px] h-[100px] object-cover rounded-[18px]" alt="">
+							</button>
+
+							<!-- Photos template -->
+							<template v-for="photo in photos" key="index in photos">
+								<img :src="photo" class="w-[100px] h-[100px] object-cover rounded-[18px]" alt="">
+							</template>
+						</div>
 					</div>
 					<div class="mt-10">
-						<a href="/admin/program" class="btn-primary w-full">
+						<a href="/admin/workshop/" class="btn-primary w-full">
 							Simpan
 						</a>
 					</div>
@@ -114,6 +177,27 @@
 			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="/assets/scripts/navtoggler.js"></script>
 
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<script>
+			const { createApp } = Vue
+
+			createApp({
+				data() {
+					return {
+						photos: []
+					}
+				},
+				methods: {
+					uploadPhotos(e) {
+						let files = e.target.files
+
+						for (let i = 0; i < files.length; i++) {
+							this.photos.push(URL.createObjectURL(files[i]))
+						}
+					}
+				},
+			}).mount('#workshopForm')
+		</script>
 	</body>
 
 </html>
